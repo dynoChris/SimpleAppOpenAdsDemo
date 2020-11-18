@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--real ad-->
+<!--    <string name="app_id" translatable="false">put your real id here</string>-->
+<!--    <string name="app_open_ads1" translatable="false">put your real id here</string>-->
+
+    <!--test ad-->
+    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="app_open_ads1" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+
+</resources>
