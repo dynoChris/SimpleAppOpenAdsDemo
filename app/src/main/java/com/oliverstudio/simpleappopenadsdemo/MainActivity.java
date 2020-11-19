@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
         //uncomment the code to add test devices
-//        List<String> testDeviceIds = Arrays.asList("put your device id here");
+//        List<String> testDeviceIds = Arrays.asList("put your device ids here");
 //        RequestConfiguration configuration = new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
 //        MobileAds.setRequestConfiguration(configuration);
 
@@ -33,9 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //!!!Be ware, keep loadCallback object as FIELD, don't local variable.
+    // It's because under the hood the loadCallback is wrapped in a WeakReference.
+    // Link must be strong, otherwise, after launching the Garbage Collector, the object will be removed.
     private AppOpenAd.AppOpenAdLoadCallback loadCallback;
 
     private void initAppOpenAds() {
+
         loadCallback = new AppOpenAd.AppOpenAdLoadCallback() {
 
             @Override
