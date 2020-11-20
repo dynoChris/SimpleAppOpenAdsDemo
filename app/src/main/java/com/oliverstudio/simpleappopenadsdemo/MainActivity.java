@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     //!!!Be ware, keep loadCallback object as FIELD, don't local variable.
     // It's because under the hood the loadCallback is wrapped in a WeakReference.
-    // Link must be strong, otherwise, after launching the Garbage Collector, the object will be removed.
+    // The reference must be strong, otherwise, after launching a Garbage Collector, the object will be removed.
     private AppOpenAd.AppOpenAdLoadCallback loadCallback;
 
     private void initAppOpenAds() {
