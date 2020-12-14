@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity {
     private AppOpenAd.AppOpenAdLoadCallback loadCallback;
 
     private void initAppOpenAds() {
-
         loadCallback = new AppOpenAd.AppOpenAdLoadCallback() {
 
             @Override
             public void onAppOpenAdLoaded(AppOpenAd ad) {
-                Log.d("ptg", "onAppOpenAdLoaded: ");
-                ad.show(MainActivity.this, new FullScreenContentCallback(){
+                ad.show(MainActivity.this, new FullScreenContentCallback() {
                     @Override
                     public void onAdShowedFullScreenContent() {
                         super.onAdShowedFullScreenContent();
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAppOpenAdFailedToLoad(LoadAdError loadAdError) {
-                Log.d("ptg", "onAppOpenAdFailedToLoad: ");
+
             }
         };
 
