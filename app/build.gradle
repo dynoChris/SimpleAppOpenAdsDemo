@@ -36,4 +36,7 @@ dependencies {
 
     //admob
     implementation 'com.google.android.gms:play-services-ads:19.5.0'
+
+    //lifecycle observer
+    implementation "android.arch.lifecycle:extensions:1.1.1"
 }
